@@ -1,14 +1,18 @@
 # Business Goal
-Estimate the Unit Sales of Walmart retail goods to support their strategic development, make tactical decisions, and manage their demand and supply planning processes to avoid customer service issues and high inventory costs.
+The primary objective is to estimate the unit sales of Walmart retail goods, providing crucial support for strategic development, enabling tactical decision-making, and facilitating effective demand and supply planning. The ultimate goal is to mitigate customer service issues and minimize high inventory costs through informed and accurate sales forecasts.
 
 
 ### Feature engineering
-1. Sales-related features, like lag sales for different periods, and rolling sales for different periods. This type of feature reflects the trend component. 
-2. Price-related features, like max, min standard deviation of prices for that product. 
-3. Calendar related features. Different weekdays like Monday, Tuesday, and Wednesday; different months like January, February, and so on.
+To enhance the predictive power of the model, I incorporated various feature engineering techniques, including:
+
+1. Sales-related Features: I integrated lag sales for different periods and rolling sales for distinct time frames. These features capture the trend component, providing valuable insights into sales patterns.
+
+2. Price-related Features: I incorporated features such as maximum, minimum, and standard deviation of prices for each product. This approach allows the model to consider pricing dynamics, influencing sales predictions.
+
+3. Calendar-related Features: I leveraged calendar-related information, including weekdays (e.g., Monday, Tuesday, Wednesday) and months (e.g., January, February). These features account for temporal variations in sales, contributing to a more nuanced and accurate forecasting model..
 
 ### Model Training
-We will implement LightGBM via Python, and use different models for different weeks and 10 different models for different stores, so we will have 4 weeks* 10 stores = 40 models in total.
+The implementation utilizes LightGBM in Python, leveraging its efficiency and effectiveness in handling large datasets. To account for store and temporal variations, I developed 40 models in total—10 models for each of the four weeks, considering different stores individually.
 
 # Result
-We successfully forecast sales of 28 days with less than 0.6 WRMSSE (Weighted Root Mean Squared Scaled Error).
+Through meticulous model training and feature engineering, I achieved successful sales forecasts for a 28-day period. The model's performance is assessed using the Weighted Root Mean Squared Scaled Error (WRMSSE), and I proudly achieved a performance metric of less than 0.6 WRMSSE. This result underscores the accuracy and reliability of the forecasting model in predicting Walmart's unit sales, providing a robust foundation for informed decision-making in the areas of inventory management and customer service optimization.
